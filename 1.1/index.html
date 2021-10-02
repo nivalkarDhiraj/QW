@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+</head>
+
+<body>
+    <form>
+        <Label>Range:</Label>
+        <input type="text" id="rangestart" placeholder="start"></input>
+        <input type="text" id="rangeend" placeholder="end"></input>
+        <button type="button" id="findPrime">Find</button>
+    </form>
+    <div id="results">
+        <ul>
+            <li>Prime Numbers: <span id="primeNumbers"></span></li>
+            <li>Time taken to run the function "getPrimesInRange" : <span id="timeForFunction"></span></li>
+            <li>Average time taken to determine the number is prime or not for all numbers : <span
+                    id="timeForAll"></span></li>
+            <li>Average time taken to determine the number is prime for prime numbers : <span id="timeForPrime"></span>
+            </li>
+        </ul>
+        <button type="button" id="details">Details</button>
+
+    </div>
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+
+
+            <table id="allTable">
+                <h4>All Numbers</h4>
+                <tr>
+                    <th>Number</th>
+                    <th>Result</th>
+                    <th>Time in ms</th>
+                </tr>
+            </table>
+
+            <table id="primeTable">
+                <h4>Prime Numbers</h4>
+                <tr>
+                    <th>Number</th>
+                    <th>Result</th>
+                    <th>Time in ms</th>
+                </tr>
+            </table>
+
+        </div>
+
+        <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
